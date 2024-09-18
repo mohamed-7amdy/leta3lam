@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Cairo", sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+img {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 0;
+    right: 0;
+    margin-right: 60px;
+    margin-top: 20px;
+}
+
+.all {
+    margin-top: 80px;
+    flex-grow: 1; 
+}
+h1 {
+    margin-bottom: 40px;
+}
+.all p {
+    margin-bottom: 20px;
+}
+input {
+    font-family: "Cairo", sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    font-family: "Cairo", sans-serif;
+    padding: 10px 20px;
+    font-size: 17px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Start Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p:not(.copyright) {
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid white;
+    font-size: 22px;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.footer .social-icons i {
+    padding: 2px 15px;
+    font-size: 28px;
+}
+
+.footer .social-icons {
+    text-align: center;
+}
+
+.footer .social-icons a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* تلوين الأيقونات بألوانها الحقيقية */
+.footer .social-icons a.facebook {
+    color: #3b5998;
+}
+
+.footer .social-icons a.instagram {
+    color: #e4405f;
+}
+
+.footer .social-icons a.linkedin {
+    color: #0077b5;
+}
+
+.footer .social-icons a:hover {
+    color: #ad9551;
+}
+
+.footer .copyright {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.footer .copyright span a {
+    font-weight: bold;
+    color: #ad9551;
+    text-decoration: none;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    img {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .footer p {
+        font-size: 18px;
+    }
+
+    .footer .social-icons i {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+
+    .footer .social-icons i {
+        font-size: 20px;
+    }
+}

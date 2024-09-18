@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+    <title>التحقق من الشهادة</title>
+</head>
+<body>
+    <img src="leta3lam-modified.png" alt="">
+
+    <div class="all">
+        <h1>التحقق من شهادة إتمام دورة من لِتعلَم</h1>
+        <p>أدخل الرقم التعريفي للشهادة للتحقق مما إذا كانت موثقة:</p>
+
+        <input type="text" id="certificateID" placeholder="أدخل الرقم التعريفي للشهادة">
+        <button onclick="verifyCertificate()">تحقق</button>
+
+        <div id="result"></div>
+    </div>
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/letaalam/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/leta3lam/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/mohamed-ahmed-8bb01b219/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="copyright">جميع الحقوق محفوظة <span><a href="https://www.facebook.com/nobarmej/" target="_blank">لِتعلَم</a></span> &copy; 2024</p>
+    </div>
+    <!-- End Footer -->
+
+    <script>
+        // قائمة الشهادات الموثقة وأسماء الأشخاص
+        const validCertificates = {
+            "17120071": "حبيبة خالد البيسي",
+            "17120072": "محمد أحمد",
+            "17120073": "خالد إبراهيم"
+        };
+
+        // وظيفة التحقق من الشهادة
+        function verifyCertificate() {
+            const certificateID = document.getElementById("certificateID").value;
+            const resultDiv = document.getElementById("result");
+
+            // التحقق من وجود الشهادة في القائمة
+            if (validCertificates[certificateID]) {
+                const personName = validCertificates[certificateID];
+                resultDiv.innerHTML = `<span style="color: green;">الشهادة رقم ${certificateID} موثقة ✅. ${personName} قد اجتاز/ت الدورة وأتم/ت المشروع النهائي بنجاح 🎓</span>`;
+            } else {
+                resultDiv.innerHTML = `<span style="color: red;">الشهادة رقم ${certificateID} غير موجودة ❌</span>`;
+            }
+        }
+    </script>
+</body>
+</html>
