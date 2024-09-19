@@ -32,7 +32,7 @@ img {
 }
 
 .all {
-    margin-top: 80px;
+    margin: 150px auto;
     flex-grow: 1; 
 }
 h1 {
@@ -79,9 +79,9 @@ button:hover {
     color: white;
     text-align: center;
     padding: 15px 15px;
-    position: relative;
     bottom: 0;
     width: 100%;
+    height: auto;
 }
 
 .footer p:not(.copyright) {
@@ -92,36 +92,31 @@ button:hover {
     width: fit-content;
     margin: 20px auto;
 }
-
-.footer .social-icons i {
-    padding: 2px 15px;
-    font-size: 28px;
-}
-
 .footer .social-icons {
-    text-align: center;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-.footer .social-icons a {
-    transition: transform 0.3s ease, color 0.3s ease;
+.footer .social-icons img {
+    position: relative;
+    margin: 20px;
+    width: 30px; /* تعديل حجم الأيقونات */
+    height: 30px; /* تعديل حجم الأيقونات */
+    transition: transform 0.3s ease;
 }
 
-/* تلوين الأيقونات بألوانها الحقيقية */
-.footer .social-icons a.facebook {
-    color: #3b5998;
+.footer .social-icons a .insta {
+    width: 37px;
+    height: 37px;
 }
 
-.footer .social-icons a.instagram {
-    color: #e4405f;
+.footer .social-icons img:hover {
+    transform: scale(1.1); /* تأثير التكبير عند التمرير */
 }
 
-.footer .social-icons a.linkedin {
-    color: #0077b5;
-}
-
-.footer .social-icons a:hover {
-    color: #ad9551;
-}
 
 .footer .copyright {
     margin-top: 20px;
